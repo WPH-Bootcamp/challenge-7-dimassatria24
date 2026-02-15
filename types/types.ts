@@ -35,6 +35,9 @@ export interface RegisterResponse {
       name: string;
       email: string;
       phone: string;
+      avatar: string;
+      latitude: number;
+      longitude: number;
       createAt: string;
     };
   };
@@ -45,9 +48,9 @@ export interface UserProfilePayload {
   name: string;
   email: string;
   phone: string;
-  avatar: string | null;
-  latitude: number | null;
-  longitude: number | null;
+  avatar: string;
+  latitude: number;
+  longitude: number;
   createdAt: string;
   updatedAt: string;
 }
@@ -56,4 +59,29 @@ export interface ProfileResponse {
   success: boolean;
   message: string;
   data: UserProfilePayload;
+}
+
+// types/profile.ts
+export interface UpdateProfilePayload {
+  name?: string;
+  email?: string;
+  phone?: string;
+  avatar?: string;
+}
+
+export interface UpdateProfileResponse {
+  succes: boolean;
+  message: string;
+  data: {
+    user: {
+      id: number;
+      name: string;
+      email: string;
+      phone: string;
+      avatar: string;
+      latitude: number;
+      longitude: number;
+      createAt: string;
+    };
+  };
 }
