@@ -7,7 +7,7 @@ import {
   RegisterResponse,
   UpdateProfilePayload,
   UpdateProfileResponse,
-} from '@/types/types';
+} from '@/features/auth/auth.types';
 
 export async function registerUser(payload: RegisterPayload) {
   const res = await api.post<RegisterResponse>('/auth/register', payload);

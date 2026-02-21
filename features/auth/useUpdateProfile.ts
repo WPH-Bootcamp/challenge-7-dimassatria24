@@ -3,7 +3,10 @@ import { AxiosError } from 'axios';
 import { toast } from 'sonner';
 
 import { ApiError } from '@/lib/api-error';
-import {  UpdateProfilePayload, UpdateProfileResponse } from '@/types/types';
+import {
+  UpdateProfilePayload,
+  UpdateProfileResponse,
+} from '@/features/auth/auth.types';
 import { updateProfile } from './auth.api';
 
 export function useUpdateProfile() {

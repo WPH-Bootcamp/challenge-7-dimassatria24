@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 import Cookies from 'js-cookie';
-import { LoginPayload, LoginResponse } from '../../types/types';
+import { LoginPayload, LoginResponse } from './auth.types';
 import { ApiError } from '@/lib/api-error';
 import { loginUser } from './auth.api';
 import { toast } from 'sonner';
@@ -30,3 +30,4 @@ export function useLogin() {
     },
   });
 }
+

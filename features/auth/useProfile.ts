@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 
 import { ApiError } from '@/lib/api-error';
-import { ProfileResponse } from '@/types/types';
+import { ProfileResponse } from '@/features/auth/auth.types';
 import { getUserProfile } from './auth.api';
 
 export function useProfile() {
